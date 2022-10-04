@@ -10,11 +10,11 @@ describe('Nav component', () => {
     render(<Nav />);
   });
 // something wrong with this code when i comment out it says a snapshot is obsolete...otherwise there is an error 
-//   it('matches snapshot', () => {
-//     const { asFragment } = render(<Nav />);
+ it('matches snapshot', () => {
+   const { asFragment } = render(<Nav />);
 
-//     expect(asFragment()).toMatchSnapshot();
-//   });
+  expect(asFragment()).toMatchSnapshot();
+  });
 })
 
 describe('emoji is visible', () => {
