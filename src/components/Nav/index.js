@@ -8,11 +8,13 @@ function Nav(props) {
     categories = [],
     setCurrentCategory,
     currentCategory,
+    contactSelected,
+    setContactSelected
   } = props;
 
 
   const handleClick = (item) => {
-    console.log(item);
+    setContactSelected(!contactSelected)
     return item;
   };
 
@@ -31,7 +33,9 @@ function Nav(props) {
             </a>
           </li>
           <li className={"mx-2"}>
-            <span onClick={() => handleClick('Contact')}>
+            <span onClick={() => {
+                handleClick()
+            }}>
               Contact
             </span>
           </li>
